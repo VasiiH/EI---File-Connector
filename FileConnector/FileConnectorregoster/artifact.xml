@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="xml2CsvConfig" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>xml2CsvConfig.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="xml2CsvConfig_inputSchema" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>xml2CsvConfig_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="xml2CsvConfig_outputSchema" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>xml2CsvConfig_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="xml2CsvConfig_xsltStyleSheet" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>xml2CsvConfig_xsltStyleSheet.xml</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="CsvToXmlConfig" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>CsvToXmlConfig.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="CsvToXmlConfig_inputSchema" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>CsvToXmlConfig_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="CsvToXmlConfig_outputSchema" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>CsvToXmlConfig_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+    <artifact name="CsvToXmlConfig_xsltStyleSheet" groupId="com.example.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>CsvToXmlConfig_xsltStyleSheet.xml</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+            <properties/>
+        </item>
+    </artifact>
+</artifacts>

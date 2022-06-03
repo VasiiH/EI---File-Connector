@@ -1,0 +1,26 @@
+map_S_root_S_test = function(){ 
+var outputtest={};
+
+var count_i_inputroot_876388b3_de34_4675_b201_4b0b039367c0 = 0;
+outputtest =  {};
+outputtest.information =  {};
+outputtest.information.people =  {};
+outputtest.information.people.person =  [];
+
+for(i_inputroot_876388b3_de34_4675_b201_4b0b039367c0 in inputroot){
+outputtest.information.people.person[count_i_inputroot_876388b3_de34_4675_b201_4b0b039367c0] =  {};
+outputtest.information.people.person[count_i_inputroot_876388b3_de34_4675_b201_4b0b039367c0].name = inputroot[i_inputroot_876388b3_de34_4675_b201_4b0b039367c0].Name;
+outputtest.information.people.person[count_i_inputroot_876388b3_de34_4675_b201_4b0b039367c0].age = Number(inputroot[i_inputroot_876388b3_de34_4675_b201_4b0b039367c0].Age);
+outputtest.information.people.person[count_i_inputroot_876388b3_de34_4675_b201_4b0b039367c0].company = inputroot[i_inputroot_876388b3_de34_4675_b201_4b0b039367c0].Company;
+
+count_i_inputroot_876388b3_de34_4675_b201_4b0b039367c0++;
+}
+return outputtest;
+};
+
+
+
+
+
+
+

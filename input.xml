@@ -1,0 +1,16 @@
+<test>
+<information>
+    <people>
+        <person>
+            <name>Hasitha</name>
+            <age>34</age>
+            <company>wso2</company>
+        </person>
+        <person>
+            <name>Johan</name>
+            <age>32</age>
+            <company>IBM</company>
+        </person>
+    </people>
+</information>
+</test>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="FileConnector" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/FileConnector.xml</file>
+    </artifact>
+    <artifact name="FileConnector_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/FileConnector_swagger.yaml</file>
+    </artifact>
+    <artifact name="FileConnector_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/FileConnector_metadata.yaml</file>
+    </artifact>
+    <artifact name="myLocalFileConnection" groupId="com.example.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>\src\main\synapse-config\local-entries\myLocalFileConnection.xml</file>
+    </artifact>
+    <artifact name="My Local File Connection" groupId="com.example.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>\src\main\synapse-config\local-entries\My Local File Connection.xml</file>
+    </artifact>
+    <artifact name="FileConnectorFaultSeq" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/FileConnectorFaultSeq.xml</file>
+    </artifact>
+</artifacts>

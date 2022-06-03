@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/fileconnector" name="FileConnector" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <log level="custom">
+                <property name="IN_Message" value="SUCCESS process one"/>
+            </log>
+            <datamapper config="gov:datamapper/xml2CsvConfig.dmc" description="XML to CSV Tansform " inputSchema="gov:datamapper/xml2CsvConfig_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/xml2CsvConfig_outputSchema.json" outputType="CSV" xsltStyleSheet="gov:datamapper/xml2CsvConfig_xsltStyleSheet.xml"/>
+            <enrich description="save payload">
+                <source clone="true" type="body"/>
+                <target property="CONTENT" type="property"/>
+            </enrich>
+            <file.checkExist configKey="My Local File Connection">
+                <path>/dataCollection/employees/employees.csv</path>
+                <includeResultTo>Message Body</includeResultTo>
+            </file.checkExist>
+            <filter regex="true" source="//checkExistresult/fileExists/text()">
+                <then/>
+                <else>
+                    <log level="custom">
+                        <property name="ELSE_MESSAGE" value="Else Block Executed"/>
+                    </log>
+                    <file.write configKey="My Local File Connection">
+                        <filePath>/dataCollection/employees/employees.csv</filePath>
+                        <mimeType>Automatic</mimeType>
+                        <compress>false</compress>
+                        <writeMode>Overwrite</writeMode>
+                        <enableStreaming>false</enableStreaming>
+                        <appendNewLine>true</appendNewLine>
+                        <enableLock>true</enableLock>
+                        <includeResultTo>Message Body</includeResultTo>
+                        <updateLastModified>true</updateLastModified>
+                    </file.write>
+                </else>
+            </filter>
+            <enrich description="put back saved payload">
+                <source clone="true" property="CONTENT" type="property"/>
+                <target type="body"/>
+            </enrich>
+            <file.write configKey="My Local File Connection">
+                <filePath>/dataCollection/employees/employees.csv</filePath>
+                <mimeType>Automatic</mimeType>
+                <compress>false</compress>
+                <writeMode>Overwrite</writeMode>
+                <enableStreaming>false</enableStreaming>
+                <appendNewLine>true</appendNewLine>
+                <enableLock>false</enableLock>
+                <includeResultTo>Message Body</includeResultTo>
+                <updateLastModified>false</updateLastModified>
+            </file.write>
+            <file.read configKey="My Local File Connection">
+                <path>/dataCollection/employees/employees.csv</path>
+                <readMode>Complete File</readMode>
+                <startLineNum>0</startLineNum>
+                <endLineNum>0</endLineNum>
+                <lineNum>0</lineNum>
+                <includeResultTo>Message Body</includeResultTo>
+                <enableStreaming>false</enableStreaming>
+                <enableLock>false</enableLock>
+            </file.read>
+            <datamapper config="gov:datamapper/CsvToXmlConfig.dmc" inputSchema="gov:datamapper/CsvToXmlConfig_inputSchema.json" inputType="CSV" outputSchema="gov:datamapper/CsvToXmlConfig_outputSchema.json" outputType="XML" xsltStyleSheet="gov:datamapper/CsvToXmlConfig_xsltStyleSheet.xml"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence>
+            <sequence key="FileConnectorFaultSeq"/>
+        </faultSequence>
+    </resource>
+</api>
